@@ -1,0 +1,24 @@
+.Pokedex {
+  border-radius: 16px;
+  width: 90%;
+  height: 100%;
+  background-color: #ededed;
+}
+
+.Pokedex-title {
+  color: #aa9f9f;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 24px;
+}
+
+.Pokedex-deck {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 16px;
+}
