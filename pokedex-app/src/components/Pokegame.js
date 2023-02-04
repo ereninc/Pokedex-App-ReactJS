@@ -15,9 +15,13 @@ function Pokegame() {
   return (
     <div>
       <h1>POKEGAME</h1>
-      <h3>{player1.isWinner ? "Winning Hand" : "Losing Hand"}</h3>
+      <h3 style={player1.isWinner ? { color: "green" } : { color: "red" }}>
+        {player1.isWinner ? "Winning Hand" : "Losing Hand"}
+      </h3>
       <Pokedex pokedex={firstHand} dexExperience={player1.dexExperience} />
-      <h3>{player2.isWinner ? "Winning Hand" : "Losing Hand"}</h3>
+      <h3 style={player2.isWinner ? { color: "green" } : { color: "red" }}>
+        {player2.isWinner ? "Winning Hand" : "Losing Hand"}
+      </h3>
       <Pokedex pokedex={secondHand} dexExperience={player2.dexExperience} />
     </div>
   );
