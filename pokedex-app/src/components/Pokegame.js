@@ -2,6 +2,7 @@ import React from "react";
 import Pokedex from "./Pokedex";
 import PokemonData from "../model/PokemonData";
 import { totalExperience, checkWinner } from "../helpers/Helper";
+import "../css/Pokegame.css";
 
 function Pokegame() {
   let player1 = {};
@@ -16,6 +17,15 @@ function Pokegame() {
   return (
     <div>
       <h1>POKEGAME!</h1>
+      <button
+        className="Pokegame-btn-fight"
+        type="submit"
+        onClick={(e) => {
+          onFight(e);
+        }}
+      >
+        Fight
+      </button>
       <h3 style={player1.isWinner ? { color: "green" } : { color: "red" }}>
         {player1.isWinner ? "Winning Hand" : "Losing Hand"}
       </h3>
@@ -26,6 +36,11 @@ function Pokegame() {
       <Pokedex pokedex={player2.hand} dexExperience={player2.dexExperience} />
     </div>
   );
+}
+
+function onFight(e) {
+  //   e.preventDefault();
+  window.location.reload(true);
 }
 
 export default Pokegame;
